@@ -2,7 +2,7 @@
   "name": "@the-list/aws",
   "version": "0.1.0",
   "bin": {
-    "aws": "bin/aws.js"
+    "the-list": "bin/the-list.js"
   },
   "scripts": {
     "build": "tsc --build",

@@ -2,6 +2,7 @@
 import "source-map-support/register";
 import * as cdk from "aws-cdk-lib";
 import { TheListStack } from "../lib/the-list-stack";
+import { Environment } from "@the-list/env";
 
 const app = new cdk.App();
 new TheListStack(app, "TheListStack", {
@@ -13,7 +14,6 @@ new TheListStack(app, "TheListStack", {
   // env: { account: process.env.CDK_DEFAULT_ACCOUNT, region: process.env.CDK_DEFAULT_REGION },
   /* Uncomment the next line if you know exactly what Account and Region you
    * want to deploy the stack to. */
-  // env: { account: '123456789012', region: 'us-east-1' },
+  env: { account: Environment.AWS_ACCOUNT_ID, region: Environment.AWS_REGION },
   /* For more information, see https://docs.aws.amazon.com/cdk/latest/guide/environments.html */
 });
-
